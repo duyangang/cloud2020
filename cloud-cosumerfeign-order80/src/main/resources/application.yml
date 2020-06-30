@@ -1,0 +1,22 @@
+server:
+  port: 80
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka, http://eureka7002.com:7002/eureka
+#feign:
+#  client:
+#    config:
+#      default:
+#        connectTimeout: 5000
+#        readTimeout: 5000
+#注意：为什么单独设置了readTimeout不能生效呢？原则上readtimout应该是读取资源的时间啊。
+ribbon:
+  ReadTimeout:  5000
+  ConnectTimeout: 5000
+
+
+logging:
+  level:
+    com.dyg.springcloud.service.PaymentFeignClient: debug

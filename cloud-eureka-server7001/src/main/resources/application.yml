@@ -12,5 +12,5 @@ eureka:
       #defaultZone: http://eureka7001.com:7001/eureka/    #设置与eureka server交互的地址查询服务和注册服务都需要依赖这个地址
   server:
     #关闭自我保护功能
-    #enable-self-preservation: false
-    #eviction-interval-timer-in-ms: 2000
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 2000
