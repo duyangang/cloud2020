@@ -1,5 +1,6 @@
 package com.dyg.springcloud.service;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.stereotype.Service;
 
 import java.util.concurrent.TimeUnit;
@@ -13,6 +14,12 @@ public class PaymentService {
     }
 
     //失败
+    /**
+     * 演示服务降级
+     * @param id
+     * @return
+     */
+    @HystrixCommand()
     public String paymentInfo_TimeOut(Integer id){
         int timeNumber = 3;
         try { TimeUnit.SECONDS.sleep(timeNumber); }catch (Exception e) {e.printStackTrace();}
