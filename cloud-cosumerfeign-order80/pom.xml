@@ -23,7 +23,7 @@
         </dependency>
         <dependency>
             <groupId>com.dyg.springcloud</groupId>
-            <artifactId>cloud-api-common</artifactId>
+            <artifactId>cloud-api-commons</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
