@@ -8,9 +8,15 @@ spring:
     config:
       label: master
       name: config
-      profile: dev
+      profile: test
       uri: http://localhost:3344
 eureka:
   client:
     service-url:
       defaultZone: http://eureka7001.com:7001/eureka
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
