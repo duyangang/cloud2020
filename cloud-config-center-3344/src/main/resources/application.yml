@@ -5,6 +5,7 @@ spring:
     name: cloud-config-center
   cloud:
     config:
+      label: master
       server:
         git:
           uri: https://github.com/duyangang/sprincloud-config.git
@@ -12,9 +13,22 @@ spring:
             - springcloud-config
           username: duyangang
           password: duyangang123456
-      label: master
+
+  #增加rabbitmq相关配置，15672是web界面的端口 5672是MQ访问的接口
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:7001/eureka
+
+#暴露监控端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'bus-refresh'
