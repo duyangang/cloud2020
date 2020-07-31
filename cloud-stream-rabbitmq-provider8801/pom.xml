@@ -12,8 +12,6 @@
     <artifactId>cloud-stream-rabbitmq-provider8801</artifactId>
 
     <dependencies>
-
-
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-stream-rabbit</artifactId>
@@ -66,8 +64,5 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
-
-
     </dependencies>
 </project>

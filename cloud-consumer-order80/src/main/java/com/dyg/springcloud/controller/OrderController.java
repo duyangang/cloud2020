@@ -48,4 +48,11 @@ public class OrderController {
         System.out.println("si.getUri()=" + si.getUri());
         return restTemplate.getForObject(si.getUri()+"/payment/serverPort",String.class);
     }
+
+    @GetMapping("/consumer/payment/zipkin")
+    public String paymentZipkin()
+    {
+        String result = restTemplate.getForObject("http://localhost:8001"+"/payment/zipkin/", String.class);
+        return result;
+    }
 }
