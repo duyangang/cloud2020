@@ -42,8 +42,8 @@ public class FlowLimitController
         int a = 10 / 0;
         return "------testC";
     }
-    @GetMapping("/testE")
-    @SentinelResource(value = "testE",blockHandler="handler_testHostKey")
+    @GetMapping("/testHotKey")
+    @SentinelResource(value = "testHotKey",blockHandler="handler_testHostKey")
     public String testHostKey(@RequestParam(required = false,value = "p1") String p1,
                             @RequestParam(required = false,value = "p2") String p2) {
 
