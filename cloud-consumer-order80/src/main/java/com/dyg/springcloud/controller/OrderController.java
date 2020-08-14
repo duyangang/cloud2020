@@ -1,8 +1,8 @@
 package com.dyg.springcloud.controller;
 
+import com.dyg.springcloud.lb.MyLoadBalancer;
 import com.dyg.springcloud.entities.CommonResult;
 import com.dyg.springcloud.entities.Payment;
-import com.dyg.springcloud.lb.MyLoadBalancer;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
